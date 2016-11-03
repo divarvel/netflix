@@ -1,0 +1,9 @@
+@import play.api.libs.json.{Json,JsValue}
+@(js: JsValue)(implicit rh: RequestHeader)
+
+@main("Here is your json") {
+  <h1>Coucou</h1>
+  <pre>
+    @Json.prettyPrint(js)
+  </pre>
+}

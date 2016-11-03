@@ -1,0 +1,16 @@
+@import play.api.libs.json.{Json,JsValue}
+@(movie: models.dto.Movie, movies: List[models.dto.Movie])(implicit rh: RequestHeader)
+
+@main("Here is your json") {
+  <h1>Coucou</h1>
+  <dl>
+    <dt>Title</dt>
+    <dd>@movie.show_title</dd>
+    <dt>Year</dt>
+    <dd>@movie.release_year</dd>
+    <dt>Other movies by the same director</dt>
+    @for(otherMovie <- movies) {
+      <dd>@otherMovie.show_title (@otherMovie.release_year)</dd>
+    }
+  </dl>
+}
