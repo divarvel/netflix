@@ -60,7 +60,7 @@ class HomeController @Inject() (ws: WSClient, context: ExecutionContext) extends
    * a path of `/`.
    */
   def index = Action { implicit request =>
-    Ok(views.html.index("<script>alert('coucou')</script>"))
+    Ok(views.html.index("Your new application is ready."))
   }
 
 }
